@@ -1,0 +1,7 @@
+qubits,m,k_max,variant,cp_expected,h,cp,swap,logical_depth,opt1_total_gates,opt1_two_qubit_gates,opt1_depth,opt3_total_gates,opt3_two_qubit_gates,opt3_depth,linear_total_gates,linear_two_qubit_gates,linear_depth,noswap_total_gates,noswap_two_qubit_gates,noswap_depth,process_fidelity,avg_gate_fidelity,direct_dft_mults,radix2_fft_mults
+2,,2,Exact,1,2,1,1,4,14,5,12,10,2,8,14,5,12,11,2,9,0.9999999999999991,0.9999999999999993,16,4
+3,,3,Exact,3,3,3,1,6,27,9,20,21,6,15,30,12,26,24,6,17,0.9999999999999991,0.9999999999999992,64,12
+3,2.0,2,AQFT m=2,2,3,2,1,6,22,7,18,17,4,13,25,10,21,19,4,15,0.8901650429449542,0.9023689270621816,64,12
+4,,4,Exact,6,4,6,2,8,48,18,28,36,12,22,57,27,38,42,12,25,0.9999999999999987,0.9999999999999988,256,32
+4,3.0,3,AQFT m=3,5,4,5,2,8,43,16,28,32,10,22,52,25,39,37,10,25,0.9714548246917315,0.9731339526510413,256,32
+4,2.0,2,AQFT m=2,3,4,3,2,8,33,12,24,24,6,18,39,18,28,27,6,21,0.7150440309478314,0.7318061467744296,256,32

@@ -1,0 +1,51 @@
+========================================================================
+Group 14 | Quantum Fourier Transform | environment
+========================================================================
+  python     : 3.13.18
+  qiskit     : 2.6.2
+  qiskit_aer : 0.18.4
+  numpy      : 2.5.3
+  pandas     : 3.0.5
+  matplotlib : 3.11.2
+  shots      : 1024    seeds: [11, 23, 37, 51, 73]
+
+[1/3] Validating circuits against the classical DFT
+  n=2: max|U_QFT - F_DFT| = 2.69e-16, max|FFT - F v| = 1.24e-16
+  n=3: max|U_QFT - F_DFT| = 1.42e-15, max|FFT - F v| = 1.42e-15
+  n=4: max|U_QFT - F_DFT| = 3.78e-15, max|FFT - F v| = 1.62e-14
+  AQFT construction equivalent to qiskit.synthesis.synth_qft_full: True
+
+[2/3] Resource analysis (transpiled to rz, sx, x, cx)
+       Exact n=2: CX= 5 gates= 14 depth= 12 F_proc=1.0000
+       Exact n=3: CX= 9 gates= 27 depth= 20 F_proc=1.0000
+    AQFT m=2 n=3: CX= 7 gates= 22 depth= 18 F_proc=0.8902
+       Exact n=4: CX=18 gates= 48 depth= 28 F_proc=1.0000
+    AQFT m=3 n=4: CX=16 gates= 43 depth= 28 F_proc=0.9715
+    AQFT m=2 n=4: CX=12 gates= 33 depth= 24 F_proc=0.7150
+
+[3/3] Running experiments E1-E18 (1024 shots x 5 seeds each)
+   E1 n=2 Exact      N0: F_dist=0.9999±0.0001  F_state=1.0000  CX=5  depth=12  (0.1s)
+   E2 n=3 Exact      N0: F_dist=0.9998±0.0001  F_state=1.0000  CX=9  depth=20  (0.2s)
+   E3 n=3 AQFT m=2   N0: F_dist=0.9581±0.0008  F_state=0.9467  CX=7  depth=18  (0.2s)
+   E4 n=4 Exact      N0: F_dist=0.9994±0.0001  F_state=1.0000  CX=18  depth=28  (0.6s)
+   E5 n=4 AQFT m=3   N0: F_dist=0.9897±0.0006  F_state=0.9868  CX=16  depth=28  (0.5s)
+   E6 n=4 AQFT m=2   N0: F_dist=0.9013±0.0007  F_state=0.8594  CX=12  depth=24  (0.5s)
+   E7 n=2 Exact      N1: F_dist=0.9671±0.0019  F_state=0.9803  CX=5  depth=12  (0.1s)
+   E8 n=3 Exact      N1: F_dist=0.9478±0.0014  F_state=0.9649  CX=9  depth=20  (0.3s)
+   E9 n=3 AQFT m=2   N1: F_dist=0.9146±0.0016  F_state=0.9208  CX=7  depth=18  (0.3s)
+  E10 n=4 Exact      N1: F_dist=0.9215±0.0015  F_state=0.9322  CX=18  depth=28  (0.7s)
+  E11 n=4 AQFT m=3   N1: F_dist=0.9181±0.0017  F_state=0.9269  CX=16  depth=28  (0.7s)
+  E12 n=4 AQFT m=2   N1: F_dist=0.8487±0.0015  F_state=0.8204  CX=12  depth=24  (0.6s)
+  E13 n=2 Exact      N2: F_dist=0.8853±0.0035  F_state=0.9176  CX=5  depth=12  (0.1s)
+  E14 n=3 Exact      N2: F_dist=0.8276±0.0022  F_state=0.8575  CX=9  depth=20  (0.3s)
+  E15 n=3 AQFT m=2   N2: F_dist=0.8166±0.0034  F_state=0.8378  CX=7  depth=18  (0.3s)
+  E16 n=4 Exact      N2: F_dist=0.7455±0.0009  F_state=0.7446  CX=18  depth=28  (0.6s)
+  E17 n=4 AQFT m=3   N2: F_dist=0.7561±0.0018  F_state=0.7571  CX=16  depth=28  (0.6s)
+  E18 n=4 AQFT m=2   N2: F_dist=0.7272±0.0022  F_state=0.7033  CX=12  depth=24  (0.6s)
+
+[S1] Supplementary noise-strength sweep (n = 4, s x N2 rates)
+  S1 sweep done for Exact
+  S1 sweep done for AQFT m=3
+  S1 sweep done for AQFT m=2
+
+Done in 25.1 s. Results written to /home/claude/Group14_QFT_Code/results
